@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Bullets - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/icon-4bullets.svg">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top transition-colors">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/icon-4bullets.svg" alt="4Bullets" height="40"
+                    class="d-inline-block align-text-top logo-svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Menu (Hidden on Mobile via navbar-expand-lg behavior) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" data-i18n="nav-home">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-i18n="nav-portfolio">
+                            Portafolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pages/fotografia.html"
+                                    data-i18n="nav-photo">Fotografía</a></li>
+                            <li><a class="dropdown-item" href="pages/disenografico.html" data-i18n="nav-graphic">Diseño
+                                    Gráfico</a></li>
+                            <li><a class="dropdown-item" href="pages/diseno3d.html" data-i18n="nav-3d">Diseño 3D</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" id="contactLinkDesktop"
+                            data-i18n="nav-contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" data-lang-btn data-i18n="nav-lang">English</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu"
+                aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active fw-bold" aria-current="page" href="index.html"
+                                data-i18n="nav-home">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown mb-2">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-i18n="nav-portfolio">
+                                Portafolio
+                            </a>
+                            <ul class="dropdown-menu border-0">
+                                <li><a class="dropdown-item ps-4" href="pages/fotografia.html"
+                                        data-i18n="nav-photo">Fotografía</a></li>
+                                <li><a class="dropdown-item ps-4" href="pages/disenografico.html"
+                                        data-i18n="nav-graphic">Diseño Gráfico</a>
+                                </li>
+                                <li><a class="dropdown-item ps-4" href="pages/diseno3d.html" data-i18n="nav-3d">Diseño
+                                        3D</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link fw-bold" href="javascript:void(0)" id="contactLinkMobile"
+                                data-i18n="nav-contact">Contacto</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link fw-bold" href="javascript:void(0)" data-lang-btn
+                                data-i18n="nav-lang">English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section with Liquid Ink Effect -->
+    <header class="full-screen-intro text-center position-relative overflow-hidden">
+        <!-- Liquid Canvas Background -->
+        <canvas id="liquid-canvas"></canvas>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <!-- Logo SVG replaces text -->
+            <div class="mb-4">
+                <img src="assets/img/logo4bullets.svg" alt="4Bullets"
+                    style="height: auto; max-width: 80vw; max-height: 15vh; opacity: 1; filter: brightness(0) invert(1);">
+            </div>
+
+            <p class="lead mb-5 fs-4 fw-bold text-uppercase" style="font-family: 'Rajdhani', sans-serif;">
+                <a href="pages/fotografia.html" class="hero-link text-white text-decoration-none d-inline-block"><span
+                        class="text-roll" data-i18n="hero-photo">Fotografía</span></a>
+                <span class="mx-2">|</span>
+                <a href="pages/disenografico.html"
+                    class="hero-link text-white text-decoration-none d-inline-block"><span class="text-roll"
+                        data-i18n="hero-graphic">Diseño
+                        Gráfico</span></a>
+                <span class="mx-2">|</span>
+                <a href="pages/diseno3d.html" class="hero-link text-white text-decoration-none d-inline-block"><span
+                        class="text-roll" data-i18n="hero-3d">Diseño 3D</span></a>
+            </p>
+            <a href="https://www.youtube.com/watch?v=mV-nogiSnT8" target="_blank" class="btn-custom"
+                data-i18n="hero-btn">Ver Portafolio</a>
+        </div>
+
+        <!-- Scroll Down Arrow (Outside Inner Container to stick to bottom) -->
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <a href="#presentation" class="scroll-arrow"></a>
+        </div>
+
+    </header>
+
+    <!-- Presentation Card Section -->
+    <section id="presentation" class="py-5 bg-white position-relative">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <!-- Card Container Expanded to col-12 -->
+                    <div class="presentation-card d-flex flex-column flex-md-row w-100">
+                        <!-- Left: Image Reveal (Canvas Paint Effect) -->
+                        <div class="col-md-5 position-relative image-holder" id="revealContainer">
+                            <!-- Base Image (Visible by default) -->
+                            <img src="assets/img/me1.jpg" alt="Leonardo" class="w-100 h-100 object-fit-cover base-img">
+                            <!-- Canvas for painting the reveal (Helmet) -->
+                            <canvas id="revealCanvas"></canvas>
+                        </div>
+
+                        <!-- Right: Text Content -->
+                        <div class="col-md-7 p-5 d-flex flex-column justify-content-center">
+                            <!-- Matching "Descubre" & "Logos" headers -->
+                            <h2 class="display-1 lh-sm mb-4"
+                                style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -2px; text-transform: none !important;"
+                                data-i18n="pres-hi">
+                                Hola!
+                            </h2>
+                            <!-- Matching "Orgulloso..." text style -->
+                            <p class="mb-3"
+                                style="font-family: 'Rajdhani', sans-serif; font-weight: 500; font-size: 1.5rem; line-height: 1.2;"
+                                data-i18n="pres-p1">
+                                Me llamo Leonardo, pero todo el mundo me dice Leo. Soy un
+                                diseñador gráfico de Baja California, México. Con un interés
+                                por el diseño minimalista e industrial.
+                            </p>
+                            <p class="mb-3"
+                                style="font-family: 'Rajdhani', sans-serif; font-weight: 500; font-size: 1.5rem; line-height: 1.2;"
+                                data-i18n="pres-p2">
+                                Me gusta explorar artistas y tendencias (ya sea dentro o fuera del diseño gráfico),
+                                para ir ampliando mis inspiraciones al momento de trabajar.
+                            </p>
+                            <div class="mt-4">
+                                <a href="javascript:void(0)" id="openPdfBtn"
+                                    class="btn-custom border-0 w-100 text-center"
+                                    style="background-color: var(--color-accent); color: white;"
+                                    data-i18n="pres-resume">
+                                    Ver Curriculum
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- More Info Trigger -->
+            <div class="text-center mt-5">
+                <button id="showInfoBtn" class="info-toggle-btn">
+                    <span data-i18n="more-info">más información</span>
+                    <div class="toggle-arrow"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Resume / Curriculum Section -->
+    <section class="py-5 bg-white resume-section">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Left Column: Education & Experience -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="display-5 lh-sm mb-5"
+                        style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -1px;"
+                        data-i18n="resume-edu">
+                        Educación
+                    </h2>
+
+                    <div class="resume-card mb-4">
+                        <h4 class="fw-bold" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="edu-degree">Licenciatura
+                            en Diseño Gráfico</h4>
+                        <p class="mb-1"
+                            style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem; font-weight: 500;">
+                            Universidad Autónoma de Baja California (2020 - 2025)
+                        </p>
+                        <p style="font-family: 'Rajdhani', sans-serif; font-size: 1.15rem;" data-i18n="edu-focus">
+                            Enfoque en Identidad Visual y Diseño Editorial.
+                        </p>
+                    </div>
+
+                    <div class="resume-card mb-5">
+                        <h4 class="fw-bold" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="edu-google">Google
+                            Marketing Digital e E-Commerce</h4>
+                        <p class="mb-1"
+                            style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem; font-weight: 500;">
+                            Coursera (2024 - 2025)
+                        </p>
+                        <p style="font-family: 'Rajdhani', sans-serif; font-size: 1.15rem;" data-i18n="edu-google-desc">
+                            Especialización en SEO, SEM y estrategias de E-Commerce.
+                        </p>
+                    </div>
+
+                    <h2 class="display-5 lh-sm mb-5"
+                        style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -1px;"
+                        data-i18n="resume-exp">
+                        Experiencia
+                    </h2>
+
+                    <div class="resume-card mb-4">
+                        <h4 class="fw-bold" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="exp-freelance">Freelance
+                            (4BULLETS)</h4>
+                        <p class="mb-1"
+                            style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem; font-weight: 500;"
+                            data-i18n="exp-role-freelance">
+                            Diseñador Gráfico (2020 - Presente)
+                        </p>
+                        <p style="font-family: 'Rajdhani', sans-serif; font-size: 1.15rem;"
+                            data-i18n="exp-freelance-desc">
+                            Desarrollo de branding, material publicitario y gestión de redes para diversos clientes.
+                        </p>
+                    </div>
+
+                    <div class="resume-card mb-4">
+                        <h4 class="fw-bold" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="exp-buro">Buró de
+                            diseño UABC</h4>
+                        <p class="mb-1"
+                            style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem; font-weight: 500;"
+                            data-i18n="exp-role-buro">
+                            Diseñador Gráfico (2024)
+                        </p>
+                        <p style="font-family: 'Rajdhani', sans-serif; font-size: 1.15rem;" data-i18n="exp-buro-desc">
+                            Creación de identidad visual para proyectos de la universidad.
+                        </p>
+                    </div>
+
+                    <div class="resume-card">
+                        <h4 class="fw-bold" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="exp-flow">Flow
+                            Marketing Group</h4>
+                        <p class="mb-1"
+                            style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem; font-weight: 500;"
+                            data-i18n="exp-role-flow">
+                            Diseñador Gráfico (2025)
+                        </p>
+                        <p style="font-family: 'Rajdhani', sans-serif; font-size: 1.15rem;" data-i18n="exp-flow-desc">
+                            Apoyo en la creación de contenido visual para campañas digitales y redes sociales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Skills & Languages -->
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-5 lh-sm mb-5"
+                        style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -1px;"
+                        data-i18n="resume-skills">
+                        Habilidades
+                    </h2>
+
+                    <div class="skill-row resume-card mb-4" title="Photoshop">
+                        <div class="skill-icon me-3">
+                            <img src="assets/img/adobe-photoshop-svgrepo-com.svg" alt="Ps"
+                                style="width: 40px; height: 40px;">
+                        </div>
+                        <span class="skill-name">Adobe Photoshop</span>
+                    </div>
+
+                    <div class="skill-row resume-card mb-4" title="Illustrator">
+                        <div class="skill-icon me-3">
+                            <img src="assets/img/illustrator-svgrepo-com.svg" alt="Ai"
+                                style="width: 40px; height: 40px;">
+                        </div>
+                        <span class="skill-name">Adobe Illustrator</span>
+                    </div>
+
+                    <div class="skill-row resume-card mb-4" title="After Effects">
+                        <div class="skill-icon me-3">
+                            <img src="assets/img/adobeaftereffects-svgrepo-com.svg" alt="Ae"
+                                style="width: 40px; height: 40px;">
+                        </div>
+                        <span class="skill-name">Adobe After Effects</span>
+                    </div>
+
+                    <div class="skill-row resume-card mb-4" title="Premiere Pro">
+                        <div class="skill-icon me-3">
+                            <img src="assets/img/premiere-svgrepo-com.svg" alt="Pr" style="width: 40px; height: 40px;">
+                        </div>
+                        <span class="skill-name">Adobe Premiere Pro</span>
+                    </div>
+
+                    <div class="skill-row resume-card mb-4" title="Lightroom">
+                        <div class="skill-icon me-3">
+                            <img src="assets/img/lightroom-svgrepo-com.svg" alt="Lr" style="width: 40px; height: 40px;">
+                        </div>
+                        <span class="skill-name">Adobe Lightroom</span>
+                    </div>
+
+                    <div class="skill-row resume-card mb-5" title="Blender">
+                        <div class="skill-icon me-3">
+                            <img src="assets/img/blender-svgrepo-com.svg" alt="Blender"
+                                style="width: 40px; height: 40px;">
+                        </div>
+                        <span class="skill-name">Blender 3D</span>
+                    </div>
+
+                    <h2 class="display-5 lh-sm mb-5"
+                        style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -1px;"
+                        data-i18n="resume-lang">
+                        Idiomas
+                    </h2>
+
+                    <div class="resume-card mb-4">
+                        <h4 class="fw-bold mb-1" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="lang-es">Español
+                        </h4>
+                        <p class="mb-1 text-muted" style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem;"
+                            data-i18n="lang-es-level">
+                            Nativo</p>
+                    </div>
+
+                    <div class="resume-card mb-4">
+                        <h4 class="fw-bold mb-1" style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;"
+                            data-i18n="lang-en">Inglés
+                        </h4>
+                        <p class="mb-1 text-muted" style="font-family: 'Rajdhani', sans-serif; font-size: 1.25rem;"
+                            data-i18n="lang-en-level">MCER
+                            B2</p>
+                        <p style="font-family: 'Rajdhani', sans-serif; font-size: 1.15rem;" class="text-muted mb-0"
+                            data-i18n="lang-en-desc">
+                            Conversacional y técnico.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hide Info Trigger -->
+            <div class="text-center mt-5">
+                <button id="hideInfoBtn" class="info-toggle-btn hide-btn">
+                    <div class="toggle-arrow"></div>
+                    <span data-i18n="hide-info">ocultar</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Partners / Logos Section (Lando Style) -->
+    <section class="py-5 bg-white overflow-hidden">
+        <div class="container mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-start">
+                    <!-- Matching "Descubre lo que hago" style exactly: display-1, lh-sm, -2px spacing -->
+                    <h2 class="display-1 lh-sm"
+                        style="font-family: 'Orbitron', sans-serif; font-weight: 900 !important; color: var(--color-accent); letter-spacing: -2px; text-transform: none !important;"
+                        data-i18n="logos-title">
+                        Logos y<br>
+                        proyectos.
+                    </h2>
+                </div>
+                <!-- Description Text -->
+                <div class="col-md-6 text-start ps-md-5">
+                    <p class="mb-0"
+                        style="font-family: 'Rajdhani', sans-serif; font-weight: 500; font-size: 1.5rem; max-width: 500px; line-height: 1.2;"
+                        data-i18n="logos-desc">
+                        Orgulloso de haber trabajado para una variedad de proyectos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infinite Logo Carousel -->
+        <div class="logo-carousel-wrapper mt-4">
+            <div class="logo-carousel-track">
+                <!-- Original Set -->
+                <div class="logo-slide"><img src="assets/img/cl1.png" alt="Client 1"></div>
+                <div class="logo-slide"><img src="assets/img/cl2.png" alt="Client 2"></div>
+                <div class="logo-slide"><img src="assets/img/cl3.png" alt="Client 3"></div>
+                <div class="logo-slide"><img src="assets/img/cl4.png" alt="Client 4"></div>
+                <div class="logo-slide"><img src="assets/img/cl5.png" alt="Client 5"></div>
+                <div class="logo-slide"><img src="assets/img/cl6.png" alt="Client 6"></div>
+                <div class="logo-slide"><img src="assets/img/cl7.png" alt="Client 7"></div>
+
+                <!-- Duplicate Set for Loop -->
+                <div class="logo-slide"><img src="assets/img/cl1.png" alt="Client 1"></div>
+                <div class="logo-slide"><img src="assets/img/cl2.png" alt="Client 2"></div>
+                <div class="logo-slide"><img src="assets/img/cl3.png" alt="Client 3"></div>
+                <div class="logo-slide"><img src="assets/img/cl4.png" alt="Client 4"></div>
+                <div class="logo-slide"><img src="assets/img/cl5.png" alt="Client 5"></div>
+                <div class="logo-slide"><img src="assets/img/cl6.png" alt="Client 6"></div>
+                <div class="logo-slide"><img src="assets/img/cl7.png" alt="Client 7"></div>
+
+                <!-- Triplicate Set for smooth wide screens -->
+                <div class="logo-slide"><img src="assets/img/cl1.png" alt="Client 1"></div>
+                <div class="logo-slide"><img src="assets/img/cl2.png" alt="Client 2"></div>
+                <div class="logo-slide"><img src="assets/img/cl3.png" alt="Client 3"></div>
+                <div class="logo-slide"><img src="assets/img/cl4.png" alt="Client 4"></div>
+                <div class="logo-slide"><img src="assets/img/cl5.png" alt="Client 5"></div>
+                <div class="logo-slide"><img src="assets/img/cl6.png" alt="Client 6"></div>
+                <div class="logo-slide"><img src="assets/img/cl7.png" alt="Client 7"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <!-- Left: Big Text -->
+                <div class="col-lg-5 mb-5 mb-lg-0 text-start">
+                    <h2 class="display-1 lh-sm"
+                        style="font-family: 'Orbitron'; color: var(--color-accent); letter-spacing: -2px; text-transform: none !important;">
+                        <span data-i18n="line1">Descubre</span><br>
+                        <span data-i18n="line2">lo que</span><br>
+                        <span id="word-swap" class="word-swap-container">hago</span>
+                    </h2>
+                </div>
+                <!-- Right: Category Cards -->
+                <div class="col-lg-7">
+                    <div class="d-flex flex-column gap-3 align-items-end">
+                        <a href="pages/fotografia.html" class="category-card"
+                            style="background-image: url('assets/img/banner1.jpg'); max-width: 650px;">
+                            <span class="text-roll" data-i18n="cat-photo">Fotografía</span>
+                        </a>
+                        <a href="pages/disenografico.html" class="category-card"
+                            style="background-image: url('assets/img/banner2.jpg'); max-width: 650px;">
+                            <span class="text-roll" data-i18n="cat-graphic">Diseño Gráfico</span>
+                        </a>
+                        <a href="pages/diseno3d.html" class="category-card"
+                            style="background-image: url('assets/img/banner3.jpg'); max-width: 650px;">
+                            <span class="text-roll" data-i18n="cat-3d">Diseño 3D</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a class="footer-logo" href="index.html">
+                        <img src="assets/img/logo4bullets.svg" alt="4Bullets" height="40">
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="pages/fotografia.html" class="footer-link text-decoration-none"
+                            data-i18n="nav-photo">Photography</a>
+                        <a href="pages/disenografico.html" class="footer-link text-decoration-none"
+                            data-i18n="nav-graphic">Graphic Design</a>
+                        <a href="pages/diseno3d.html" class="footer-link text-decoration-none" data-i18n="nav-3d">3D
+                            Design</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-socials justify-content-lg-end justify-content-center">
+                        <a href="https://www.behance.net/leonardvillarr7" class="footer-social-icon text-white"
+                            target="_blank">
+                            <img src="assets/img/behance-163-svgrepo-com.svg" alt="Behance">
+                        </a>
+                        <a href="mailto:4BulletsDesign@Gmail.com" class="footer-social-icon text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">© <span id="current-year"></span> 4Bullets Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Video Popup Modal -->
+    <div id="videoPopup" class="video-popup">
+        <div class="video-popup-content">
+            <button id="closeVideoBtn" class="video-popup-close">&times;</button>
+            <div class="ratio ratio-16x9">
+                <iframe id="videoFrame" src="" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Popup Modal -->
+    <div id="pdfPopup" class="video-popup">
+        <div class="video-popup-content" style="height: 90vh; max-width: 1200px;">
+            <button id="closePdfBtn" class="video-popup-close" style="z-index: 10;">&times;</button>
+            <div class="ratio" style="height: 100%;">
+                <iframe id="pdfFrame" src="" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Popup Modal -->
+    <div id="contactPopup" class="video-popup">
+        <div class="video-popup-content contact-popup-content text-center p-5">
+            <button id="closeContactBtn" class="video-popup-close">&times;</button>
+            <div class="py-4">
+                <a href="mailto:4BulletsDesign@Gmail.com" class="email-text display-5 fw-bold"
+                    style="font-family: 'Rajdhani', sans-serif; color: var(--color-text); text-decoration: none; transition: color 0.3s ease;">
+                    4BulletsDesign@Gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
