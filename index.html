@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4Bullets - Portfolio</title>
 
-    <!-- Bootstrap CSS -->
+
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+
+
+
     <link rel="stylesheet" href="css/style.css?v=1.1">
     <link rel="icon" type="image/svg+xml" href="assets/img/icon-4bullets.svg">
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top transition-colors">
         <div class="container-fluid px-4">
             <a class="navbar-brand" href="index.html">
@@ -27,7 +30,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Desktop Menu (Hidden on Mobile via navbar-expand-lg behavior) -->
+
+
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -57,7 +62,9 @@
                 </ul>
             </div>
 
-            <!-- Mobile Offcanvas Menu -->
+
+
+
             <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu"
                 aria-labelledby="mobileMenuLabel">
                 <div class="offcanvas-header justify-content-end">
@@ -99,15 +106,18 @@
         </div>
     </nav>
 
-    <!-- Header / Hero Section with Liquid Ink Effect -->
     <header class="full-screen-intro text-center position-relative overflow-hidden">
-        <!-- Background Video -->
+
+
+
         <video autoplay loop muted playsinline class="hero-video">
             <source src="assets/img/Herobackground.mp4" type="video/mp4">
         </video>
 
         <div class="container position-relative" style="z-index: 2;">
-            <!-- Logo SVG replaces text -->
+
+
+
             <div class="mb-4">
                 <img src="assets/img/logo4bullets.svg" alt="4Bullets"
                     style="height: auto; max-width: 80vw; max-height: 15vh; opacity: 1; filter: brightness(0) invert(1);">
@@ -129,21 +139,26 @@
                 data-i18n="hero-btn">Ver Portafolio</a>
         </div>
 
-        <!-- Scroll Down Arrow (Outside Inner Container to stick to bottom) -->
+
+
+
         <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
             <a href="#presentation" class="scroll-arrow"></a>
         </div>
 
     </header>
 
-    <!-- Presentation Card Section -->
     <section id="presentation" class="py-5 bg-white position-relative">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <!-- Card Container Expanded to col-12 -->
+
+
+
                     <div class="presentation-card d-flex flex-column flex-md-row w-100">
-                        <!-- Left: Image Reveal (Canvas Paint Effect) -->
+
+
+
                         <div class="col-md-5 position-relative image-holder" id="revealContainer">
                             <!-- Base Image (Visible by default) -->
                             <img src="assets/img/me1.jpg" alt="Leonardo" class="w-100 h-100 object-fit-cover base-img">
@@ -151,7 +166,9 @@
                             <canvas id="revealCanvas"></canvas>
                         </div>
 
-                        <!-- Right: Text Content -->
+
+
+
                         <div class="col-md-7 p-5 d-flex flex-column justify-content-center">
                             <!-- Matching "Descubre" & "Logos" headers -->
                             <h2 class="display-1 lh-sm mb-4"
@@ -185,7 +202,9 @@
                     </div>
                 </div>
             </div>
-            <!-- More Info Trigger -->
+
+
+
             <div class="text-center mt-5">
                 <button id="showInfoBtn" class="info-toggle-btn">
                     <span data-i18n="more-info">más información</span>
@@ -196,11 +215,14 @@
     </section>
 
 
-    <!-- Resume / Curriculum Section -->
+
+
+
     <section class="py-5 bg-white resume-section">
         <div class="container py-4">
             <div class="row">
-                <!-- Left Column: Education & Experience -->
+
+
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <h2 class="display-5 lh-sm mb-5"
                         style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -1px;"
@@ -284,7 +306,9 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Skills & Languages -->
+
+
+
                 <div class="col-lg-6 ps-lg-5">
                     <h2 class="display-5 lh-sm mb-5"
                         style="font-family: 'Orbitron'; color: var(--color-accent); font-weight: 900 !important; letter-spacing: -1px;"
@@ -366,7 +390,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Hide Info Trigger -->
+
+
+
             <div class="text-center mt-5">
                 <button id="hideInfoBtn" class="info-toggle-btn hide-btn">
                     <div class="toggle-arrow"></div>
@@ -377,12 +403,16 @@
     </section>
 
 
-    <!-- Partners / Logos Section (Lando Style) -->
+
+
+
     <section class="py-5 bg-white overflow-hidden">
         <div class="container mb-5">
             <div class="row align-items-center">
                 <div class="col-md-6 text-start">
-                    <!-- Matching "Descubre lo que hago" style exactly: display-1, lh-sm, -2px spacing -->
+
+
+
                     <h2 class="display-1 lh-sm"
                         style="font-family: 'Orbitron', sans-serif; font-weight: 900 !important; color: var(--color-accent); letter-spacing: -2px; text-transform: none !important;"
                         data-i18n="logos-title">
@@ -390,7 +420,9 @@
                         proyectos.
                     </h2>
                 </div>
-                <!-- Description Text -->
+
+
+
                 <div class="col-md-6 text-start ps-md-5">
                     <p class="mb-0"
                         style="font-family: 'Rajdhani', sans-serif; font-weight: 500; font-size: 1.5rem; max-width: 500px; line-height: 1.2;"
@@ -401,10 +433,14 @@
             </div>
         </div>
 
-        <!-- Infinite Logo Carousel -->
+
+
+
         <div class="logo-carousel-wrapper mt-4">
             <div class="logo-carousel-track">
-                <!-- Original Set -->
+
+
+
                 <div class="logo-slide"><img src="assets/img/cl1.png" alt="Client 1"></div>
                 <div class="logo-slide"><img src="assets/img/cl2.png" alt="Client 2"></div>
                 <div class="logo-slide"><img src="assets/img/cl3.png" alt="Client 3"></div>
@@ -413,7 +449,9 @@
                 <div class="logo-slide"><img src="assets/img/cl6.png" alt="Client 6"></div>
                 <div class="logo-slide"><img src="assets/img/cl7.png" alt="Client 7"></div>
 
-                <!-- Duplicate Set for Loop -->
+
+
+
                 <div class="logo-slide"><img src="assets/img/cl1.png" alt="Client 1"></div>
                 <div class="logo-slide"><img src="assets/img/cl2.png" alt="Client 2"></div>
                 <div class="logo-slide"><img src="assets/img/cl3.png" alt="Client 3"></div>
@@ -422,7 +460,9 @@
                 <div class="logo-slide"><img src="assets/img/cl6.png" alt="Client 6"></div>
                 <div class="logo-slide"><img src="assets/img/cl7.png" alt="Client 7"></div>
 
-                <!-- Triplicate Set for smooth wide screens -->
+
+
+
                 <div class="logo-slide"><img src="assets/img/cl1.png" alt="Client 1"></div>
                 <div class="logo-slide"><img src="assets/img/cl2.png" alt="Client 2"></div>
                 <div class="logo-slide"><img src="assets/img/cl3.png" alt="Client 3"></div>
@@ -437,7 +477,9 @@
     <section class="py-5 bg-white">
         <div class="container py-4">
             <div class="row align-items-center">
-                <!-- Left: Big Text -->
+
+
+
                 <div class="col-lg-5 mb-5 mb-lg-0 text-start">
                     <h2 class="display-1 lh-sm"
                         style="font-family: 'Orbitron'; color: var(--color-accent); letter-spacing: -2px; text-transform: none !important;">
@@ -446,7 +488,9 @@
                         <span id="word-swap" class="word-swap-container">hago</span>
                     </h2>
                 </div>
-                <!-- Right: Category Cards -->
+
+
+
                 <div class="col-lg-7">
                     <div class="d-flex flex-column gap-3 align-items-end">
                         <a href="pages/fotografia.html" class="category-card"
@@ -511,8 +555,12 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <!-- Video Popup Modal -->
+
+
+
+
+
+
     <div id="videoPopup" class="video-popup">
         <div class="video-popup-content">
             <button id="closeVideoBtn" class="video-popup-close">&times;</button>
@@ -524,7 +572,9 @@
         </div>
     </div>
 
-    <!-- PDF Popup Modal -->
+
+
+
     <div id="pdfPopup" class="video-popup">
         <div class="video-popup-content" style="height: 90vh; max-width: 1200px;">
             <button id="closePdfBtn" class="video-popup-close" style="z-index: 10;">&times;</button>
@@ -534,7 +584,9 @@
         </div>
     </div>
 
-    <!-- Contact Popup Modal -->
+
+
+
     <div id="contactPopup" class="video-popup">
         <div class="video-popup-content contact-popup-content text-center p-5">
             <button id="closeContactBtn" class="video-popup-close">&times;</button>
